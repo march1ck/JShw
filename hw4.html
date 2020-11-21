@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script> 
+        
+      let arr =[-4,1,0,-13,8,-1,2,-2,7,15,-6,-10,3];
+        arr.sort(compareNumeric);
+        console.log(arr);
+        
+        arr.reverse();
+        console.log(arr);
+        
+         function compareNumeric(a, b) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+         }
+        let nums =[-4,1,0,-13,8,-1,2,-2,7,15,-6,-10,3];
+        let positiveArr = nums.filter(function(number){
+                                     return number>=0;
+                                     });
+        
+        console.log(positiveArr);
+        
+        let count =[-4,1,0,-13,8,-1,2,-2,7,15,-6,-10,3];
+        let negativeArr = count.filter(function(number){
+            return number<0;
+        });
+        console.log(negativeArr);
+        
+        
+         
+        
+        let Student1 = {age :8 , groupName : 2} 
+        let Student2 = {age :15 , groupName : 5}
+        let Student3 = {age :41 , groupName : 3}
+        let Student4 = {age :17 , groupName : 4}
+        let Student5 = {age :19 , groupName : 2}
+        
+         let arrray = [Student1,Student2,Student3,Student4,Student5];
+        
+//   але так нічого не виводить, в чому тут помилка?     
+//        var gN = arrray.filter(function(groupName){
+//            return arrray.groupName;
+//        });
+//        
+//        console.log(gN);
+        
+            for(let i = 0;i<arrray.length;i++){
+            console.log(arrray[i].groupName);
+        }
+        
+    let getSum = arrray.reduce(function(sum , current){
+       return sum + current.age; 
+    },0);
+console.log(getSum);
+        
+        let minor = arrray.filter(function(number){
+            return number.age < 18;
+        });
+       console.log(minor);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
